@@ -1,3 +1,5 @@
+# This repo is archived - please use https://github.com/adobecom/milo-college for a starter Milo Template
+
 # Milo goes to college
 Use this project template to create a Milo site.
 
