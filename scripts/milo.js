@@ -8,6 +8,7 @@ export function getMiloLibs() {
     && !hostname.includes('hlx.live')
     && !hostname.includes('localhost')) return '/libs';
   const libsBranch = new URLSearchParams(window.location.search).get('milolibs') || 'main';
+  if (!/^[a-zA-Z0-9_-]+$/.test(libsBranch)) throw new Error('Invalid branch name.');
   miloLibs = libsBranch === 'local' ? 'http://localhost:6456/libs' : `https://${libsBranch}.milo.pink/libs`;
   return miloLibs;
 }
